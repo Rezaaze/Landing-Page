@@ -1,0 +1,59 @@
+
+@media screen and (max-width:850px) {
+    
+    header{
+        
+        background-color: brown;
+        height: 100px;
+        
+    }
+    
+    nav{
+        
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    
+    nav h1{
+        font-size: 2rem;
+    }
+    
+    nav ul{
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        margin: 0 10px;
+        width: 80px ;
+    
+    }
+    
+    nav ul li a{
+        padding: 5px;
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: .2s;
+    
+    }
+    
+    nav ul li a:hover{
+        color: blanchedalmond;
+        border: 1px solid wheat;
+        border-radius: 4%;
+    }
+
+    section{
+        width: 100%;
+        font-size: 1rem;
+    }
+}

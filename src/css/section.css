@@ -1,0 +1,23 @@
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    font-family: "Audiowide";
+    background: linear-gradient(to right , blue, red);
+    color:aliceblue;
+    font-size: 2rem;
+    text-align: center;
+    
+    
+    
+    
+    
+}
+
+
+
+.active{
+    color: yellow;
+    text-decoration: underline;
+}
