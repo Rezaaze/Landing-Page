@@ -1,16 +1,44 @@
 # Landing Page
 
-created a landing page with HTML CSS and Javascript.
-For every section in the body element it will be
-autmaticly be a new nav element created in the navigation.
+A simple landing page for demonstration for the use of JavaScript in combination with the DOM
 
-when on the nav a section is clicked it will scrolled to the section
-and section will be highlighted and also the element in the navigation line.
+## Description
 
-when you scroll manualy in the navbar the section in the viewport will be highlighted
+A static landing page created with HTML and styled with CSS.
+The navigation bar with the links are created by Javascript code how reads the elements of the Body Element and creates new anchor elements in the Nav for every section.
 
-the navbar will dissapear after 5 seconds when you stop scrolling
+If a section is selected or in the viewport the element will be highlighted 
 
-Basic html and css is used to archieve this.
-in Javascript only for loops and some dom manipluation with eventlisteners are used.
+The navbar disapears after 5 seconds when user stops scrolling.
 
+## Getting Started
+
+### Dependencies
+
+HTML5
+CSS3
+Javascript
+
+### Installing
+
+Just load the index.html in your browser
+
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+Just load the index.html in your browser
+
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+NO help needed
+```
+
+## Authors
+
+Alireza
