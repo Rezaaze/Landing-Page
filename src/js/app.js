@@ -1,6 +1,22 @@
 // Adding an eventlistener to the document to ensure that all code will be start evaluated when the DOM is loaded
 
+
 document.addEventListener("DOMContentLoaded", function(event){
+    // A function to return true if the parameter is in the viewport found at stackoverflow used after understanding how it works
+        function elementInViewport(el){
+        let rect    = el.getBoundingClientRect(),
+            vWidth  = window.innerWidth || document.documentElement.clientWidth,
+            vHeight = window.innerHeight || document.documentElement.clientHeight,
+            efp     = function (x,y) { return document.elementFromPoint(x,y)};
+
+        //Return false if it's not in the viewport
+        if(rect.right < 0 || rect.bottom < 0 || rect.left > vWidth || rect.top > vHeight) return false;
+        //Return true if any of its four corners are visible
+        return (el.contains(efp(rect.left, rect.top)) || el.contains(efp(rect.right, rect.top)) || el.contains(efp(rect.right, rect.bottom))|| el.contains(efp(rect.left, rect.bottom)))
+
+    }
+
+
     // selecting element from the DOM and saved in variabels
     const header = document.querySelector("header");
     const ul = document.querySelector("ul");
@@ -41,11 +57,12 @@ document.addEventListener("DOMContentLoaded", function(event){
 
     
     // adding an eventlister for highlighting the nav element and the section when it is in the viewport
-    document.addEventListener("scroll", function(e){
+    /*document.addEventListener("scroll", function(e){
             
             for(let i of sections){
             
             let rect = i.getBoundingClientRect()
+            console.log(i.offsetTop)
             const navElement = this.getElementById(i.id+"k")
             
             if(rect.top >= -517 && rect.bottom <= 1552){
@@ -60,8 +77,31 @@ document.addEventListener("DOMContentLoaded", function(event){
         }
     }
         
-    })
+    })*/
+    
 
+    // adding an eventlister for highlighting the nav element and the section when it is in the viewport
+    document.addEventListener("scroll", function(e){
+            
+        for(let i of sections){
+        
+        
+        const navElement = this.getElementById(i.id+"k")
+        
+        if(elementInViewport(i)){
+            i.classList.add("active")
+            
+            navElement.classList.add("active")
+            
+        }else{
+            
+            i.classList.remove("active")
+            navElement.classList.remove("active")
+        
+    }
+}
+    
+})   
    
  // blending the nav out when it is no scrolled about 5 seconds
     document.addEventListener("scroll", function(e){
