@@ -1,4 +1,4 @@
-#Landing Page
+# Landing Page
 
 created a landing page with HTML CSS and Javascript.
 For every section in the body element it will be
